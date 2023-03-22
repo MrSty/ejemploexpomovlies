@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/item_1"
+        android:id="@+id/interno"
         android:enabled="true"
         android:icon="@drawable/ic_in_cont"
         android:title="Contenido Interno"/>
     <item
-        android:id="@+id/item_2"
+        android:id="@+id/externo"
         android:enabled="true"
         android:icon="@drawable/ic_out_cont"
         android:title="Contenido Externo"/>
