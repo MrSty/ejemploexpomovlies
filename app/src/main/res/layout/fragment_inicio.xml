@@ -30,4 +30,13 @@
         android:textColorHint="@color/md_theme_light_background"
         android:layout_marginTop="200dp"
         />
+
+    <Button
+        android:id="@+id/btnFotoRemota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Foto remota"
+        android:textColorHint="@color/md_theme_light_background"
+        android:layout_marginTop="300dp"
+        />
 </FrameLayout>

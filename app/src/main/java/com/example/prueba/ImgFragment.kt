@@ -42,20 +42,9 @@ private lateinit var binding: FragmentImgBinding
         super.onViewCreated(view, savedInstanceState)
 
         val imagen = binding.image
-        val queue = Volley.newRequestQueue(getActivity())
-        val url = "acaba va tu puta direccion de mierda"
-        val stringRequest = StringRequest(Request.Method.GET,url, Response.Listener { response ->
-            val jsonArray = JSONArray(response)
-            for (i in 0 until jsonArray.length()) {
-                val jsonObject = JSONObject(jsonArray.getString(i))
-                Glide.with(requireActivity()).load(jsonObject.get("ruta").toString()).into(imagen)
+        val imageUrl = "http://192.168.1.11/prueba/upload/Screenshot2023-03-17210159.png"
 
-            }
-        },Response.ErrorListener { error ->
-
-
-        })
-        queue.add(stringRequest)
+        Glide.with(this).load(imageUrl).into(imagen)
     }
 
 
