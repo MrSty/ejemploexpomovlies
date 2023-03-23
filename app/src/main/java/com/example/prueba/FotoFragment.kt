@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.example.prueba.databinding.FragmentFotoBinding
 
 class FotoFragment : Fragment() {
@@ -43,6 +44,10 @@ class FotoFragment : Fragment() {
 
         binding.button.setOnClickListener {
             inicioFoto()
+        }
+
+        binding.volver.setOnClickListener {
+            findNavController().navigate(R.id.action_fotoFragment_to_inicioFragment)
         }
 
 

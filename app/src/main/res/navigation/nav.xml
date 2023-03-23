@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_remoteFragment"
             app:destination="@id/remoteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
     <fragment
         android:id="@+id/remoteFragment"
@@ -45,12 +48,20 @@
         android:id="@+id/fotoFragment"
         android:name="com.example.prueba.FotoFragment"
         android:label="fragment_foto"
-        tools:layout="@layout/fragment_foto" />
+        tools:layout="@layout/fragment_foto" >
+        <action
+            android:id="@+id/action_fotoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
     <fragment
         android:id="@+id/videoFragment"
         android:name="com.example.prueba.VideoFragment"
         android:label="fragment_video"
-        tools:layout="@layout/fragment_video" />
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_videoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
     <fragment
         android:id="@+id/imgFragment"
         android:name="com.example.prueba.ImgFragment"

@@ -15,6 +15,7 @@ import android.widget.MediaController
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.example.prueba.databinding.FragmentVideoBinding
 
 class VideoFragment : Fragment() {
@@ -44,6 +45,10 @@ class VideoFragment : Fragment() {
         binding.vvVideo.setOnPreparedListener {
 
             it.start()
+        }
+
+        binding.volver.setOnClickListener {
+            findNavController().navigate(R.id.action_videoFragment_to_inicioFragment)
         }
     }
 

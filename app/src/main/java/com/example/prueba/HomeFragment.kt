@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding:FragmentHomeBinding
     private val REQUEST_VIDEO_PICKER = 1
     private var player: SimpleExoPlayer? = null
-
+    @Suppress("DEPRECATION")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,10 +38,14 @@ class HomeFragment : Fragment() {
             startActivityForResult(intent, REQUEST_VIDEO_PICKER)
         }
 
+        binding.volver.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_inicioFragment)
+        }
+
         return binding.root
     }
 
-
+    @Suppress("DEPRECATION")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -64,6 +68,7 @@ class HomeFragment : Fragment() {
         player = null
     }
 
+    @Suppress("DEPRECATION")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -80,10 +85,5 @@ class HomeFragment : Fragment() {
 
     fun replaceFragment(){
         findNavController().navigate(R.id.action_homeFragment_to_remoteFragment)
-    }
-
-
-    fun reproductor(context: Context){
-
     }
 }
