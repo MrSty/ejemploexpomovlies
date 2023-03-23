@@ -4,10 +4,10 @@
         android:id="@+id/interno"
         android:enabled="true"
         android:icon="@drawable/ic_in_cont"
-        android:title="Contenido Interno"/>
+        android:title="Contenido local"/>
     <item
         android:id="@+id/externo"
         android:enabled="true"
         android:icon="@drawable/ic_out_cont"
-        android:title="Contenido Externo"/>
+        android:title="Contenido remoto"/>
 </menu>
