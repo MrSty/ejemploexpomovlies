@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.prueba.databinding.FragmentRemoteBinding
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class RemoteFragment : Fragment() {
@@ -16,6 +18,7 @@ class RemoteFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
     }
 
@@ -30,7 +33,21 @@ class RemoteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        super.onViewCreated(view, savedInstanceState)
+        val playerView = binding.playerView
+        val player = context?.let { ExoPlayer.Builder(it).build() }
+
+        val mediaItem: MediaItem = MediaItem.fromUri("http://192.168.1.11/prueba/upload/videofubol.mp4")
+        if (player != null) {
+            player.setMediaItem(mediaItem)
+        }
+        if (player != null) {
+            player.prepare()
+        }
+        if (player != null) {
+            player.play()
+        }
+
+        playerView.player = player
 
         val navView: BottomNavigationView = binding.bottomNavigation
         navView.selectedItemId = R.id.externo
