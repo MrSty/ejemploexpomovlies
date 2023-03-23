@@ -36,7 +36,7 @@ class RemoteFragment : Fragment() {
         val playerView = binding.playerView
         val player = context?.let { ExoPlayer.Builder(it).build() }
 
-        val mediaItem: MediaItem = MediaItem.fromUri("http://192.168.1.11/prueba/upload/videofubol.mp4")
+        val mediaItem: MediaItem = MediaItem.fromUri("http://192.168.1.11/prueba/upload/videoprueba.mp4")
         if (player != null) {
             player.setMediaItem(mediaItem)
         }
