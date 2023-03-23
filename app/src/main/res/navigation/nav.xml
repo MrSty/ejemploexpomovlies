@@ -66,5 +66,9 @@
         android:id="@+id/imgFragment"
         android:name="com.example.prueba.ImgFragment"
         android:label="fragment_img"
-        tools:layout="@layout/fragment_img" />
+        tools:layout="@layout/fragment_img" >
+        <action
+            android:id="@+id/action_imgFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
 </navigation>

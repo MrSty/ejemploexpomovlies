@@ -31,8 +31,6 @@ class InicioFragment : Fragment() {
 
         binding.btnFoto.setOnClickListener { findNavController().navigate(R.id.action_inicioFragment_to_fotoFragment) }
 
-        binding.btnVideo.setOnClickListener { findNavController().navigate(R.id.action_inicioFragment_to_videoFragment) }
-
         binding.btnReproRemota.setOnClickListener { findNavController().navigate(R.id.action_inicioFragment_to_homeFragment)}
 
         binding.btnFotoRemota.setOnClickListener {

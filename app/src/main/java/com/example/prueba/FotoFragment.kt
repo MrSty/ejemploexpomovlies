@@ -46,7 +46,7 @@ class FotoFragment : Fragment() {
             inicioFoto()
         }
 
-        binding.volver.setOnClickListener {
+        binding.volver?.setOnClickListener {
             findNavController().navigate(R.id.action_fotoFragment_to_inicioFragment)
         }
 

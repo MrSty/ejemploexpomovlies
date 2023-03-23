@@ -42,7 +42,12 @@ private lateinit var binding: FragmentImgBinding
         super.onViewCreated(view, savedInstanceState)
 
         val imagen = binding.image
-        val imageUrl = "http://192.168.1.11/prueba/upload/Screenshot2023-03-17210159.png"
+        val imageUrl = "http://10.20.28.217/prueba/upload/Screenshot2023-03-17210159.png"
+
+        binding.volver.setOnClickListener {
+            findNavController().navigate(R.id.action_imgFragment_to_inicioFragment)
+
+        }
 
         Glide.with(this).load(imageUrl).into(imagen)
     }
