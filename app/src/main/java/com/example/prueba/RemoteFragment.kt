@@ -33,11 +33,12 @@ class RemoteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val navView: BottomNavigationView = binding.bottomNavigation
+        navView.selectedItemId = R.id.externo
 
         navView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.interno -> replaceFragment()
-                R.id.externo -> Toast.makeText(context, "Ya estas en dicho sitio", Toast.LENGTH_SHORT).show()
+                R.id.externo -> Toast.makeText(context, "Item already selected", Toast.LENGTH_SHORT).show()
             }
             true
         }
